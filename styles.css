@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Cherokee:wght@400;500;700&display=swap');
+
+:root{
+  --para-text: 'Noto Sans Cherokee', serif;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin: 0 auto 10% auto;
+    text-align: center;
+    display: block;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.bs-card {
+    width: 300px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+ .bs-card-sugar {
+      width: 300px;
+      height: 200px;
+      margin: 5% auto;
+  }
+
+.bs-card-img {
+    height: 350px;
+    width: 100%;
+    padding: 10%;
+    background-position: center 45%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #efefef;
+}
+
+.bs-card-body{
+  padding: 10px 0;
+
+}
+.bs-card-header{
+  height: 50px;
+  margin-bottom: 10px;
+}
+.bs-card-title{
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 10px;
+}
+.bs-card-title:hover{
+  text-decoration: underline;
+}
+
+.bs-coffee-data{
+  font-family: var(--para-text);
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #aaa;
+}
+
+.bs-coffee-footer{
+  padding-top: 10px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+
+.price{
+  font-family: var(--para-text);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.bs-card-btn{
+  border: 1px solid black;
+  padding: 5px 1.2rem;
+  font-weight: 700;
+  font-size: .85rem;
+  letter-spacing: .05em;
+  cursor: pointer;
+  background-color: white;
+  transition: all ease-in-out .3s;
+}
+.bs-card-btn::after{
+  content:"";
+  width: 80px;
+  height: 30px;
+  right: -2px;
+  top: 12px;
+  border: 1px solid black;
+  position: absolute;
+  z-index: -1;
+  transition: all ease-in-out .3s;
+  background-color: black;
+}
+.bs-card-btn:hover{
+  background-color: black;
+  color: white;
+}
+.bs-card-btn:hover::after{
+  right: 0px;
+  top: 10px;
+}
+
+.category-products h3 {
+    font-size: 1.5rem;
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 670px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bs-card-img {
+        height: 200px;
+    width: auto;
+    padding: 10%;
+    background-position: center 45%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #efefef;
+
+    }
+
+    .bs-card {
+    max-width: 300px; /* Instead of fixed width */
+    width: 100%; /* Allow flexibility */
+    height: 400px;
+    margin: 0 auto;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+    .bs-card-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 10px;
+}
+    .bs-coffee-data{
+  font-family: var(--para-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #aaa;
+}
+}
+
+@media screen and (min-width: 671px) and (max-width: 980px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 981px) and (max-width: 1300px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .category-products h3{
+        font-size: 2rem !important;
+    }
+
+    .logo {
+        margin: 0 auto 2% auto;
+    }
+}
+@media screen and (min-width: 1301px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .category-products h3{
+        font-size: 2rem !important;
+    }
+
+    .logo {
+    margin: 0 auto 2% auto;
+
+}
+}
+
+#pilsner-glass {
+    background-image: url("./images/pilsner_qelq_330ml.png");
+}
+
+#pilsner-can-330ml {
+    background-image: url("./images/pilsner_500ml.png");
+}
+
+#pilsner-can-500ml {
+    background-image: url("./images/pilsner_500ml.png");
+}
+
+#lager-glass {
+    background-image: url("./images/lager_qelq_250ml.png");
+}
+
+#lager-can {
+    background-image: url("./images/lager_250ml.png");
+}
+
+#crudo-glass {
+    background-image: url("./images/crudo_qelq_330ml.png");
+}
+
+#crudo {
+    background-image: url("./images/crudo_qelq_330ml.png");
+}
+
+#zero-glass {
+    background-image: url("./images/zero_qelq_330ml.png");
+}
+
+#zero-can-330ml {
+    background-image: url("./images/zero_qelq_330ml.png");
+}
+
+#zero-can-500ml {
+    background-image: url("./images/zero_qelq_330ml.png");
+}
+
+#pilsner-keg {
+    background-image: url("./images/pilsner_30lit.png");
+}
+
+.checkout-center{
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Oswald', sans-serif;
+}
+
+.checkout{
+     padding: 20px;
+}
+
+.checkout-item {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+.checkout-item img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+.checkout-item-details {
+    flex-grow: 1;
+}
+.checkout-item-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.checkout-item-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+.checkout-item-price {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    outline: none;
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+}
+
+.whatsapp-button:active {
+    transform: translateY(1px);
+}
+
+input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    /* Style for error messages */
+    .errorMessage {
+        color: red;
+        display: none;
+        margin-top: 2px;
+        font-size: 14px;
+    }
+.quantity-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        border: none;
+        background-color: #8d8d8d;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        touch-action: manipulation;
+    }
+
+    .quantity-btn:hover {
+        background-color: #03648c;
+    }
+
+    .quantity-div {
+        display: flex;
+        align-items: center;
+    }
+
+    .quantity {
+        font-size: 16px;
+        padding: 5px;
+        margin: 0 10px;
+    }
+
+    .scroll-to-checkout-container {
+    position: fixed;
+    bottom: 5%;
+    right: 5px;
+    transform: translateY(-50%);
+}
+
+    #scrollToCheckoutBtn {
+    border-radius: 20px;
+    padding: 12px 12px;
+    background-color: #e7e5e5;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 12px;
+}
+
+
+
